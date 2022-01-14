@@ -1,0 +1,1569 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+@import url('http://fonts.cdnfonts.com/css/elephant');
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#contents {
+  position: absolute;
+  top:0;
+}
+#contents .page .loading {
+  display: none;
+}
+#wrap {
+  width: 100%;
+}
+/* [1] 헤더 */
+#header {
+  float: left;
+  width: 100%;
+  height: 84px;
+  border-bottom: 1px solid black;
+  position: fixed;
+  z-index: 9999;
+  backdrop-filter: brightness(1.1) blur(20px);
+}
+/* 사이트 이름 */
+#header .site_ttl {
+  float: left;
+  display: block;
+  width: 250px;
+  height: 84px;
+  font-size: 19px;
+  line-height: 84px;
+  color: #5a5b5d;
+  margin-left: 1.3%;
+}
+#header .site_ttl img {
+  width: 100%;
+  margin-top: 23px;
+}
+#header nav {
+  float: right;
+  width: 826px;
+  height: 84px;
+  /* background-color: aquamarine; */
+}
+
+#header nav li {
+  float: left;
+  text-align: center;
+}
+
+#header nav li.on {
+  background-color: #5a5b5d; color:#fff;
+}
+#header nav li.on a{
+  color:#fff;
+}
+#header nav li a {
+  display: block;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 22px;
+  line-height: 84px;
+  color: #595a5c;
+}
+
+#header nav li a.on {
+  color: white;
+}
+/* 네비버튼마다 크기 다르게 지정 */
+#header nav li.nav_1 {
+  width: 196px;
+}
+#header nav li.nav_2 {
+  width: 280px;
+}
+#header nav li.nav_3 {
+  width: 174px;
+}
+#header nav li.nav_4 {
+  width: 176px;
+}
+/* [2] 컨텐츠 */
+#contents {
+  float: left;
+  width: 100%;
+}
+/* [2-1] 메인화면 */
+#main {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-image: url("../images/main_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+/* 메인문구 */
+.main_ttl {
+  width: 100%;
+  height: 200px;
+  margin-top: 300px;
+  position: relative;
+}
+.main_ttl h1 {
+  text-align: center;
+  font-family: 'Elephant';
+  font-size: 70px;
+  line-height: 100px;
+  color: #404040;
+}
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover {
+  background-size: 100% 88%;
+}
+#main p {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-align: center;
+  color: #404040;
+  margin-top: 100px;
+}
+#main .box {
+  width: 100%;
+  height: 70px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.icon-scroll{
+  width: 40px;
+  height: 70px;
+  box-shadow: inset 0 0 0 1.5px #7F7F7F;
+  border-radius: 25px;
+  position: relative;
+}
+.icon-scroll:before{
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #404040;
+  top: 8px;
+  left: 16px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
+/* [2-2] 프로필 */
+#profile {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-color: #F2F1EF; 
+  display: flex; 
+  justify-content: space-between;
+}
+/* 프로필영역(왼쪽) */
+#profile .my_profile {
+  /* float: left; */
+  /* width: 660px; */
+  width: 34.3%;
+  height: 750px;
+  margin-top: 160px;
+  margin-left: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 프로필 사진 */
+.profile_img {
+  /* width: 470px; */
+  width: 70%;
+  /* height: 360px; */
+  height: 18vw;
+  border: 0.7px solid #707070;
+  border-radius: 157px;
+  overflow: hidden;
+  margin-top: 45px;
+  margin-bottom: 65px;
+}
+.profile_img img {
+  height: 100%;
+}
+/* 내이름 */
+.my_profile .name {
+  color: #5A5B5D;
+  text-shadow: 1px 2px 6px #5A5B5D;
+  text-align: center;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 55px;
+  line-height: 75px;
+  text-shadow: 1px 2px 6px #5A5B5D;
+}
+/* 생년월일 */
+.my_profile .birth {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 22px;
+  line-height: 33px;
+  color: #5A5B5D;
+  margin-bottom: 40px;
+}
+/* 나를 표현하는 키워드 */
+.my_profile .my_keyword {
+ width: 90%;
+ /* width: 594px; */
+ height: 40px;
+ display: flex;
+ justify-content: space-around;
+ margin-bottom: 30px;
+}
+.my_profile .my_keyword li {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.key1 {
+  width: 28.5%;
+}
+.key2 {
+  width: 26%;
+}
+.key3 {
+  width: 31%;
+}
+.my_profile .my_keyword span {
+  font-family: "Sorts Mill Goudy", serif;
+  /* font-size: 25px; */
+  font-size: 1.3vw;
+  color: #5A5B5D;
+  padding-top: 5px;
+}
+.my_keyword .underline {
+  width: 100%;
+  height: 11px;
+  background-color: #CC774A;
+  opacity: 0.51;
+  position: relative;
+  top: -9px;
+  /* z-index: -1; */
+}
+.my_goal {
+  font-family: "Pretendard-Regular";
+  font-size: 0.9vw;
+  line-height: 21px;
+  color: #5A5B5D;
+}
+/* 경력사항 & 취미 */
+#profile .work {
+  /* float: right; */
+  width: 760px;
+  height: 750px;
+  margin-top: 160px;
+  margin-right: 210px;
+}
+#profile .work h4 {
+  width: 99%;
+  height: 60px;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 32px;
+  line-height: 60px;
+  text-shadow: inset 0px 3px 6px #000;
+  color: #5A5B5D;
+  padding-left: 1%;
+  border-bottom: 0.6px solid #707070;
+}
+.work_ttl {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: flex-end;
+}
+.com_kor {
+  font-family: "Pretendard-Regular";
+  font-size: 25px;
+  /* height: 25px; */
+  /* line-height: 45px; */
+  color: #404040;
+  margin-left: 2%;
+}
+.com_kor2 {
+  font-family: "Pretendard-Regular";
+  font-size: 25px;
+  /* height: 25px; */
+  /* line-height: 45px; */
+  color: #404040;
+  margin-left: 2%;
+}
+.com_eng {
+  font-family: "Pretendard-Regular";
+  font-size: 17px;
+  line-height: 19px;
+  color: #404040;
+  margin-left: 2%;
+}
+.com_eng2 {
+  font-family: "Pretendard-Regular";
+  font-size: 17px;
+  line-height: 19px;
+  color: #404040;  
+  margin-left: 2%;
+}
+.com_intro {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  line-height: 17px;
+  color: #404040;
+  margin-left: 2%;
+}
+.work_time {
+  font-family: "Pretendard-Regular";
+  font-size: 17px;
+  line-height: 20px;
+  margin-left: 36%;
+  color: #404040;
+}
+.work_time2 {
+  font-family: "Pretendard-Regular";
+  font-size: 17px;
+  line-height: 20px;
+  margin-left: 33%;
+  color: #404040;
+}
+.work_detail {
+  width: 96%;
+  height: 200px;
+  padding: 0 2%; 
+}
+.work_detail1 {
+  border-bottom: 0.6px solid #707070;
+}
+.my_duty {
+  width: 100%;
+  height: 60px;
+  font-family: "Pretendard-Regular";
+  font-size: 15px;
+  line-height: 60px;
+  color: #5A5B5D;
+}
+.worked {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.worked li {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  line-height: 16px;
+  color: #404040;
+}
+.worked li img {
+  padding-top: 2px;
+  margin-right: 18px;
+}
+/* 취미 & 관심사 */
+.interest {
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.interest li {
+  width: 24%;
+  height: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.interest .explain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 14.5px;
+  background-color: rgb(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.interest .explain h5 {
+  font-family: "Goudy Bookletter 1911", serif;
+  color: #1c1a1a;
+  font-size: 21px;
+  line-height: 35px;
+}
+.interest .explain p {
+  font-family: "Pretendard-Regular";
+  color: #404040;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
+/* [2-3] 교육 & 스킬 */
+#skills {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-color: #F0EFED;
+  /* transition: all 5s ease-in-out; */
+  position: relative;
+}
+/* [2-3-1] 교육 */
+.education {
+  width: 100%;
+  height: 340px;
+  margin-top: 90px;
+}
+/* 교육_헤더 */
+.education header {
+  float: left;
+  width: 100%;
+  height: 63px;
+  margin-top: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.education header h3 {
+  width: 29.5%;
+  height: 63px;
+  float: left;
+  color: #5A5B5D;
+  font-family: Sorts Mill Goudy;
+  /* font-size: 45px; */
+  font-size: 2.25vw;
+  line-height: 63px;
+  margin-left: 12%;
+}
+.education header .line {
+  width: 58.5%;
+  height: 31px;
+  border-bottom: 1px solid #707070;
+}
+/* 새싹 아이콘 */
+.fa-seedling {
+  position: absolute;
+  top: -18px;
+  left: 36.8%;
+  color: #ACBAB6;
+  
+}
+/* 교육_히스토리 */
+.history {
+  float: right;
+  width: 57%;
+  height: 180px;
+  display: flex;
+}
+.history li {
+  width: 290px;
+  height: 100%;
+}
+.history h4 {
+  font-family: Pretendard;
+  font-size: 15px;
+  line-height: 22px;
+  color: #5A5B5D;
+  text-align: center;
+}
+.history p {
+  font-family: Pretendard;
+  font-size: 15px;
+  line-height: 22px;
+  color: #5A5B5D;
+  text-align: center;
+}
+/* [2-3-2] My Skills */
+.my_skills {
+  float: left;
+  width: 100%;
+  height: 570px;
+}
+/* 헤더 */
+.my_skills header {
+  float: left;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+/* 자격증 모달 버튼 */
+.open_btn_box {
+  display: block;
+  width: 190px;
+  height: 60px;
+  background-image: url("../images/myskills_tooltip.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 300px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0px 1px 5px #999);
+  margin-top: 30px;
+}
+.open_btn_box span {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 17px;
+  line-height: 23px;
+  color: #CC774A;
+  text-align: center;
+  letter-spacing: 0.09px;
+  padding-top: 15px;
+}
+/* My skills 박스 */
+.my_skills .ttl {
+  width: 170px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.my_skills .ttl h4 {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 33px;
+  line-height: 20px;
+  text-align: center;
+  color: #5A5B5D;
+  padding-top: 10px;
+}
+.my_skills .ttl .underline {
+  width: 100%;
+  height: 18px;
+  background-color: rgb(204, 119, 74, 0.44);
+}
+/* 기술 리스트 랩 */
+.skill_wrap {
+  float: left;
+  width: 100%;
+  height: 450px;
+}
+/* 수정 */
+.skill_wrap .container {
+  margin: 0 auto;
+  width: 1500px;
+  height: 370px;
+  display: flex;
+}
+.skill_wrap .container li {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.skill_wrap .container li .box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: lightblue; */
+}
+.s_ttl {
+  width: 40%;
+  height: 100%;
+  font-family: Pretendard;
+  font-size: 21px;
+  line-height: 50px;
+  color: #595A5C;
+  text-align: left;
+  margin-left: 10%;
+}
+.s_level {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: lightgoldenrodyellow; */
+}
+/* 자격증 모달 */
+.license_modal {
+  width: 700px;
+  height: 460px;
+  position: absolute;
+  top: 370px;
+  left: 50%;
+  margin-left: -350px;
+}
+.license_modal h3 {
+  font-family: Pretendard;
+  font-size: 18px;
+  line-height: 35px;
+  color: #5A5B5D;
+}
+.fa-certificate {
+  padding: 0 5px;
+}
+.list_box {
+  width: 100%;
+  height: 480px;
+  background-color: rgb(242, 241, 239, 0.9);
+  border: 1px solid #707070;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  box-shadow: 0 0 6px #777;
+  position: relative;
+}
+.list_box > div > h4 {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #567671;
+  border-bottom: 1px solid #707070;
+  margin-top: 10px;
+}
+.list_box .row {
+  width: 100%;
+  height: 40px;
+  /* background-color: lightgreen; */
+  display: flex;
+}
+.list_box .row span {
+  display: block;
+  font-family: Pretendard;
+  font-size: 16px;
+  line-height: 40px;
+  color: #5A5B5D;
+}
+.list_box .row .name {
+  width: 40%;
+  padding-left: 10px;
+}
+.list_box .row .score {
+  width: 10%;
+}
+.list_box .row .date {
+  text-align: center;
+  width: 25%;
+}
+.list_box .row .ins {
+  text-align: center;
+  width: 25%;
+}
+/* 모달 닫기 버튼 */
+.license_modal .close_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #F2F1EF;
+  border-radius: 50%;
+  position: absolute;
+  top: -22px;
+  right: -20px;
+}
+.license_modal .close_btn img {
+  width: 100%;
+}
+/* [2-5] 프로젝트 */
+#projects {
+  float: left;
+  width: 100%;
+  /* height: 3000px; */
+  /* background-color: darkolivegreen; */
+  position: relative;
+}
+/* [2-5-0] 전체 프로젝트에 고정된 아이콘  */
+/* 고정 라인 */
+#projects .fixed_icon_line {
+  width: 1px;
+  height: 1980px;
+  background-color: #595A5C;
+  position: absolute;
+  top: 130px;
+  /* left: 290px; */
+  left: 15%;
+}
+/* 고정아이콘1 */
+#projects .fixed_icon_project1 div {
+  width: 20px;
+  height: 20px;
+  background-color: #6F6F71;
+  position: absolute;
+  top: 130px;
+  /* left: 280px; */
+  left: 14.5%;
+}
+#projects .fixed_icon_project1 p {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 22px;
+  height: 30px;
+  letter-spacing: 0.07px;
+  color: #757677;
+  position: absolute;
+  top: 130px;
+  /* left: 310px; */
+  left: 16%;
+}
+/* 고정아이콘2 */
+#projects .fixed_icon_project2 div {
+  width: 20px;
+  height: 20px;
+  background-color: #6F6F71;
+  position: absolute;
+  top: 1110px;
+  /* left: 280px; */
+  left: 14.5%;
+}
+#projects .fixed_icon_project2 p {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 22px;
+  height: 30px;
+  letter-spacing: 0.07px;
+  color: #757677;
+  position: absolute;
+  top: 1110px;
+  /* left: 310px; */
+  left: 16%;
+}
+/* 고정아이콘3 */
+#projects .fixed_icon_project3 div {
+  width: 20px;
+  height: 20px;
+  background-color: #6F6F71;
+  position: absolute;
+  top: 2110px;
+  /* left: 280px; */
+  left: 14.5%;
+}
+#projects .fixed_icon_project3 p {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 22px;
+  height: 30px;
+  letter-spacing: 0.07px;
+  color: #757677;
+  position: absolute;
+  top: 2110px;
+  /* left: 310px; */
+  left: 16%;
+}
+/* [2-5-1] 프로젝트 1 */
+#project_1 {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-color: #f0efed;
+}
+/* [2-5-2] 프로젝트 2 */
+#project_2 {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-color: #f0efed;
+}
+/* 여기부터 ) 프로젝트1, 프로젝트2 공통 스타일 적용 */
+/* 프로젝트 컨텐츠 감싸는 영역 */
+
+.project_wrap {
+  margin: 0 auto;
+  /* margin-top: 84px; */
+  margin-top: 60px;
+  width: 1500px;
+  height: 916px;
+  /* background-color: antiquewhite; */
+  position: relative;
+}
+/* (1) 프로젝트 제목 */
+.project_wrap header {
+  float: left;
+  width: 920px;
+  height: 68px;
+  margin-top: 129px;
+  margin-left: 141px;
+  position: relative;
+}
+.project_wrap header .proj_name {
+  float: left;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 50px;
+  line-height: 69px;
+  color: #404040;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 2000;
+}
+.project_wrap header .work_time {
+  float: right;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #595a5c;
+  padding-top: 34px;
+}
+.project_wrap header .underline {
+  width: 709px;
+  height: 23px;
+  background-color: #567671;
+  opacity: 0.44;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* (2) 프로젝트 프로세스 및 설명 */
+.project_wrap .process {
+  float: left;
+  width: 650px;
+  height: 290px;
+  margin: 77px 0 0 153px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project_wrap .process li {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+/* 프로세스 번호 */
+.project_wrap .process li .process_num {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 1px solid #595a5c;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 23px;
+  line-height: 78px;
+  letter-spacing: 0.07px;
+  color: #404040;
+  text-align: center;
+}
+
+/* 프로세스 설명 */
+.project_wrap .process li .process_detail {
+  width: 550px;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* background-color: lightgrey; */
+}
+.project_wrap .process li .process_detail p {
+  font-family: "Pretendard-Regular";
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.04px;
+  color: #404040;
+}
+.project_wrap .process li .process_detail p span {
+  font-weight: 600;
+}
+/* (3) 프로젝트 더보기 버튼 */
+.project_wrap .more_btn {
+  display: block;
+  width: 220px;
+  height: 70px;
+  position: absolute;
+  left: 153px;
+  bottom: 25px;
+  cursor: pointer;
+}
+.project_wrap .more_btn img {
+  float: left;
+}
+.project_wrap .more_btn span {
+  font-family: "Pretendard-Regular";
+  font-size: 20px;
+  line-height: 70px;
+  text-align: center;
+  color: rgba(64, 64, 64, 1);
+  padding-left: 15px;
+  text-decoration: underline;
+}
+
+/* (4) 프로젝트 썸네일 사진 */
+.project_wrap .proj_img {
+  width: 500px;
+  height: 590px;
+  position: absolute;
+  top: 315px;
+  right: 82px;
+  z-index: 4000;
+  overflow: hidden;
+  /* overflow-y: scroll;
+  scrollbar-width: none; */
+  box-shadow: 0 0 6px #666;
+}
+.project_wrap .proj_img_cover {
+  width: 500px;
+  height: 601px;
+  position: absolute;
+  top: 315px;
+  right: 82px;
+  z-index: 5000;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.fa-search-plus {
+  color: rgb(86, 118, 113, 0.8);
+  position: relative;
+  top: 230px;
+  left: 200px;
+}
+.project_wrap .proj_img::-webkit-scrollbar {
+  display: none;
+}
+.project_wrap .proj_img::-ms-scrollbar {
+  display: none;
+}
+.project_wrap .proj_img img {
+  width: 100%;
+}
+/* (5) 프로젝트 상세페이지 링크 버튼 */
+.project_wrap .proj_link_btn {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #567671;
+  opacity: 0.44;
+  position: absolute;
+  top: 190px;
+  right: -20px;
+  z-index: 3000;
+}
+.project_wrap .proj_link_btn:hover {
+  box-shadow: 0 0 8px #444;
+  transition: 0.5s all ease;
+}
+.project_wrap .proj_link_btn span {
+  font-family: "Sorts Mill Goudy", serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 200px;
+  color: #fdfdfb;
+  padding-left: 25px;
+}
+
+/* 여기까지 ) 프로젝트1, 프로젝트2 공통 스타일 적용 */
+/* 프로젝트2만 스타일 다른 부분 */
+#project_2 .project_wrap header {
+  width: 850px;
+}
+
+#project_2 .project_wrap header .underline {
+  width: 640px;
+}
+/* [2-5-3] 프로젝트 전체 */
+#project_all {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-color: #f0efed;
+  /* position: relative; */
+}
+
+#project_all .project_btns_area {
+  width: 1000px;
+  height: 700px;
+  margin-top: 200px;
+  margin-left: 615px;
+}
+#project_all .first_sec {
+  float: left;
+  width: 320px;
+  height: 100%;
+  margin-right: 20px;
+}
+#project_all .second_sec {
+  float: right;
+  width: 660px;
+  height: 100%;
+}
+#project_all .box {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px rgba(89, 90, 92, 0.85);
+}
+#project_all .project1,
+#project_all .project4,
+#project_all .project5 {
+  width: 320px;
+  height: 400px;
+}
+#project_all .project2 {
+  width: 320px;
+  height: 280px;
+  margin-top: 20px;
+}
+#project_all .project4 {
+  margin-right: 20px;
+}
+#project_all .project3 {
+  width: 660px;
+  height: 280px;
+  margin-bottom: 20px;
+}
+#project_all .box img {
+  width : 100%;
+  
+} 
+.img_cover {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(255, 255, 255, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.img_cover h3 {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 30px;
+  line-height: 130px;
+  color: #404040;
+  margin-top: 50px;
+}
+.img_cover p {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  line-height: 30px;
+  color: #404040;
+}
+#proj_detail {
+  width: 110px;
+  height: 40px;
+  margin-top: 90px;
+  cursor: pointer;
+  font-family: "Pretendard-Regular";
+  font-size: 15px;
+  line-height: 38px;
+  color: #404040;
+}
+/* [프로젝트 전체]프로젝트1 모달 */
+.pro1_modal {
+  width: 1100px;
+  height: 600px;
+  background-color: rgb(242, 241, 239, 0.9);
+  border: 1px solid #707070;
+  box-shadow: 0 0 6px #777;
+  position: absolute;
+  top: 2200px;
+  left: 50%;
+  margin-left: -550px;
+}
+.pro1_modal .header {
+  width: 100%;
+  height: 50px;
+  background-color: #404040;
+  box-shadow: 0 0 3px 0 #777;
+  display: flex;
+  justify-content: space-between;
+}
+.pro1_modal .header h3 {
+  font-family: pretendard;
+  font-size: 20px;
+  line-height: 50px;
+  color: white;
+  padding-left: 20px;
+}
+.pro1_modal .header a {
+  width: 100px;
+  height: 50px;
+  display: block;
+  font-family: pretendard;
+  font-size: 17px;
+  line-height: 50px;
+  color: white;
+  outline: none;
+}
+.fa-times {
+  margin-left: 10px;
+}
+/* [2-6] 컨택트 */
+#contact {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  background-color: whitesmoke;
+}
+/* 메세지 보내기 폼 */
+#contact .send_msg {
+  float: left;
+  width: 550px;
+  height: 620px;
+  background-color: rgba(89, 90, 92);
+  box-shadow: 0px 0px 15px rgba(64, 64, 64, 1);
+  margin-top: 180px;
+  margin-left: 320px;
+}
+#contact .send_msg h3 {
+  font-family: 'Elephant';
+  font-size: 40px;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-top: 60px;
+}
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+          
+}
+
+#contact .send_msg input#name,
+#contact .send_msg input#tel {
+  width: 450px;
+  height: 50px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  border-radius: 22px;
+  background-color: transparent;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  line-height: 50px;
+  color: rgba(217, 217, 217, 1);
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+#contact .send_msg input#name {
+  margin-top: 50px;
+}
+#contact .send_msg #msg {
+  width: 470px;
+  height: 160px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(217, 217, 217, 1);
+  margin-left: 30px;
+  padding-left: 20px;
+  padding-top: 15px;
+  box-sizing: border-box;
+  resize: none;
+}
+/* 보내기버튼 */
+#contact input[type=submit] {
+  width: 190px;
+  height: 55px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  background-color: transparent;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  line-height: 55px;
+  color: rgba(217, 217, 217, 1);
+  border-radius: 36px;
+  margin-left: 180px;
+  margin-top: 40px;
+}
+#contact input[type=submit]:hover {
+  background-color: rgba(217, 217, 217, 1);
+  color:rgba(89, 90, 92);
+  font-weight: bolder;
+  cursor: pointer;
+}
+/* 내 정보 */
+#contact .my_info {
+  float: left;
+  width: 600px;
+  height: 620px;
+  /* background-color: rosybrown; */
+  margin-top: 180px;
+  margin-left: 120px;
+
+}
+/* 인삿말 */
+#contact .my_info .thanks_msg {
+  display: inline-block;
+  width: 100%;
+  height: 110px;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  line-height: 35px;
+  color: rgba(64, 64, 64, 1);
+  margin-top: 50px;
+  margin-bottom: 60px;
+  /* background-color: lightsteelblue; */
+  
+}
+/* 연락방법 */
+#contact .my_info .contact_way {
+  float: left;
+  width: 100%;
+  height: 390px;
+  /* background-color: red; */
+}
+#contact .my_info .contact_way .email {
+  float: left;
+  width: 330px;
+  height: 100px;
+  /* background-color: yellowgreen; */
+  position: relative;
+}
+#contact .my_info .contact_way .workspace {
+  float: right;
+  width: 270px;
+  height: 100px;
+  position: relative;
+}
+#contact .my_info .contact_way .kakaotalk,
+#contact .my_info .contact_way .instagram {  
+  float: left;
+  width: 100%;
+  height: 100px;
+  /* background-color: lightslategray; */
+  margin-top: 44px;
+  position: relative;
+}
+/* 각각 컨택트 정보 스타일  */
+#contact .my_info .contact_way h4 {
+  font-family: 'Elephant';
+  font-size: 22px;
+  line-height: 28px;
+  color: rgba(80, 90, 92, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+#contact .my_info .contact_way img {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 100;
+}
+#contact .my_info .contact_way p {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: rgba(80, 90, 92, 1);
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+/* workspace 버튼 */
+#contact .contact_way .workspace .btn_box {
+  width: 270px;
+  height: 52px;
+  margin-top: 48px;
+}
+#contact .contact_way .workspace .btn_box a {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #595A5C;
+  margin-right: 40px;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 18px;
+  line-height: 50px;
+  color: #595A5C;
+  text-align: center;
+}
+#contact .contact_way .workspace .btn_box a:hover {
+  background-color: #EEB473;
+  box-shadow: 0px 0px 10px #7576779C;
+  color: #FDFDFB;
+  border: 1px solid #EEB473;
+  transition: 0.3s;
+
+}
+@media screen and (max-width: 1800px){
+  #projects .fixed_icon_line {
+    /* left: 290px; */
+    /* left: 15%; */
+    left: 12%;
+  }
+  /* 고정아이콘1 */
+  #projects .fixed_icon_project1 div {
+    /* left: 280px; */
+    /* left: 14.5%; */
+    left: 11.5%;
+  }
+  #projects .fixed_icon_project1 p {
+    /* left: 310px; */
+    /* left: 16%; */
+    left: 13%;
+  }
+  /* 고정아이콘2 */
+  #projects .fixed_icon_project2 div {
+    left: 11.5%;
+  }
+  #projects .fixed_icon_project2 p {
+    left: 13%;
+  }
+  /* 고정아이콘3 */
+  #projects .fixed_icon_project3 div {
+    left: 11.5%;
+  }
+  #projects .fixed_icon_project3 p {
+    left: 13%;
+  }
+
+}
+@media screen and (max-width: 1700px){
+  .my_profile .my_keyword span {
+    font-size: 1.1vw;
+  }
+  .my_keyword .underline {
+    height: 9px;
+    top: -6px;
+    /* z-index: -1; */
+  }
+
+  /* education & skills */
+  .education header h3 {
+    width: 100%;
+    font-size: 45px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .education header .line {
+    display: none;
+  }
+  .history {
+    display: none;
+  }
+  .fa-seedling {
+    color: transparent;
+  }
+  /* 교육_히스토리 */
+.history {
+  float: none;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.history li {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.history h4 {
+  margin-top: 50px;
+}
+/* projects */
+#projects .fixed_icon_line {
+  /* left: 12%; */
+  left: 10%;
+}
+/* 고정아이콘1 */
+#projects .fixed_icon_project1 div {
+  /* left: 11.5%; */
+  left: 9.5%;
+}
+#projects .fixed_icon_project1 p {
+  /* left: 13%; */
+  left: 11%
+}
+/* 고정아이콘2 */
+#projects .fixed_icon_project2 div {
+  left: 9.5%;
+}
+#projects .fixed_icon_project2 p {
+  left: 11%;
+}
+/* 고정아이콘3 */
+#projects .fixed_icon_project3 div {
+  left: 9.5%;
+}
+#projects .fixed_icon_project3 p {
+  left: 11%;
+}
+}
+@media screen and (max-width: 1600px){
+  /* projects */
+  #projects .fixed_icon_line {
+    left: 8%;
+  }
+  /* 고정아이콘1 */
+  #projects .fixed_icon_project1 div {
+    left: 7.5%;
+  }
+  #projects .fixed_icon_project1 p {
+    left: 9%;
+  }
+  /* 고정아이콘2 */
+  #projects .fixed_icon_project2 div {
+    left: 7.5%;
+  }
+  #projects .fixed_icon_project2 p {
+    left: 9%;
+  }
+  /* 고정아이콘3 */
+  #projects .fixed_icon_project3 div {
+    left: 7.5%;
+  }
+  #projects .fixed_icon_project3 p {
+    left: 9%;
+  }
+  /* projects */
+  .project_wrap .process {
+    float: left;
+    /* width: 650px; */
+    width: 550px;
+  }
+  .project_wrap .process li {
+    /* height: 80px; */
+    height: 70px;
+  }
+  /* 프로세스 번호 */
+  .project_wrap .process li .process_num {
+    width: 68px;
+    height: 68px;
+    line-height: 70px;
+  }
+
+  /* 프로세스 설명 */
+  .project_wrap .process li .process_detail {
+    width: 460px;
+    height: 70px;
+  }
+  .project_wrap .process li .process_detail p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+   /* (4) 프로젝트 썸네일 사진 */
+  .project_wrap .proj_img {
+    right: 150px;
+  }
+  /* (5) 프로젝트 상세페이지 링크 버튼 */
+  .project_wrap .proj_link_btn {
+    right: 30px;
+  }
+}
+@media screen and (max-width: 1500px){
+    /* projects */
+    #projects .fixed_icon_line {
+      left: 6%;
+    }
+    /* 고정아이콘1 */
+    #projects .fixed_icon_project1 div,
+    #projects .fixed_icon_project2 div,
+    #projects .fixed_icon_project3 div {
+      left: 5.5%;
+    }
+    #projects .fixed_icon_project1 p,
+    #projects .fixed_icon_project2 p,
+    #projects .fixed_icon_project3 p {
+      left: 7.5%;
+    }
+    #profile {
+      justify-content: center;
+    }
+    #profile .my_profile {
+      display: none;
+    }
+    #profile .work {
+      margin-right: 0;
+    }
+    /* (4) 프로젝트 썸네일 사진 */
+    .project_wrap .proj_img {
+      right: 200px;
+    }
+    /* (5) 프로젝트 상세페이지 링크 버튼 */
+    .project_wrap .proj_link_btn {
+      right: 80px;
+    }
+}
+@media screen and (max-width: 1400px){
+  /* projects */
+  #projects .fixed_icon_line {
+    left: 6%;
+  }
+  /* 고정아이콘1 */
+  #projects .fixed_icon_project1 div,
+  #projects .fixed_icon_project2 div,
+  #projects .fixed_icon_project3 div {
+    left: 5.5%;
+  }
+  #projects .fixed_icon_project1 p,
+  #projects .fixed_icon_project2 p,
+  #projects .fixed_icon_project3 p {
+    left: 7.5%;
+  }
+  #profile {
+    justify-content: center;
+  }
+  #profile .my_profile {
+    display: none;
+  }
+  #profile .work {
+    margin-right: 0;
+  }
+  /* (4) 프로젝트 썸네일 사진 */
+  .project_wrap .proj_img {
+    right: 250px;
+  }
+    /* (5) 프로젝트 상세페이지 링크 버튼 */
+  .project_wrap .proj_link_btn {
+    display: block;
+    width: 150px;
+    height: 40px;
+    border-radius: 5%;
+    top: 265px;
+    right: 250px;
+  }
+  .project_wrap .proj_link_btn span {
+    font-size: 15px;
+    line-height: 40px;
+    padding-left: 15px;
+    position: relative;
+    top: 2px;
+  }
+}
+@media screen and (max-width: 1300px){
+  #header nav {
+    /* width: 826px; */
+    width: 63.5%;
+  }
+  #header nav li a {
+    font-size: 1.7vw;
+  }
+  /* 네비버튼마다 크기 다르게 지정 */
+  #header nav li.nav_1 {
+    width: 24%;
+  }
+  #header nav li.nav_2 {
+    width: 35%;
+  }
+  #header nav li.nav_3 {
+    width: 22%;
+  }
+  #header nav li.nav_4 {
+    width: 19%;
+  }
+}

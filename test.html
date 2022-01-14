@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      /* 
+      
+column:문장을 다단으로 표시함
+
+column-count : 단의 수 
+column-width : 단의 폭 
+column-gap : 단과 단 사이의 거리
+column-rule : 단과 단 사이의 구분선 지정
+      */
+      #div {
+        margin-bottom: 15px;
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      #textBox02 {
+        column-width: 300px;
+        column-count: 2;
+        column-rule: 1px solid #ccc;
+        column-gap: 40px;
+
+        -webkit-column-width: 180px;
+        -webkit-column-count: 2;
+        -webkit-column-rule: 1px solid #ccc;
+        -webkit-column-gap: 40px;
+
+        -moz-column-width: 180px;
+        -moz-column-count: 2;
+        -moz-column-rule: 1px solid #ccc;
+        -moz-column-gap: 40px;
+      }
+      #textBox03 {
+        column-width: 33px;
+        column-count: 3;
+        column-rule: 1px solid #ccc;
+        column-gap: 20px;
+
+        -webkit-column-width: 33%;
+        -webkit-column-count: 3;
+        -webkit-column-rule: 1px solid #ccc;
+        -webkit-column-gap: 20px;
+
+        -moz-column-width: 33%;
+        -moz-column-count: 3;
+        -moz-column-rule: 1px solid #ccc;
+        -moz-column-gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="textBox02">
+      <p>
+        In short, the CSS3 Multi-Column Module is a functionality to flow the
+        content of an element into multiple columns.
+      </p>
+      <p>
+        The Multi-Column Module is part of the CSS3 specifications proposed by
+        the W3C.
+      </p>
+      <p>
+        This extension to the CSS Box Model opens a new range of possibilities
+        in terms of web design. Multi-column layouts that are so pervasive in
+        the print media (think newspapers, magazines) can now become a reality
+        on the web.
+      </p>
+    </div>
+
+    <div id="textBox03">
+      <p>
+        In short, the CSS3 Multi-Column Module is a functionality to flow the
+        content of an element into multiple columns.
+      </p>
+      <p>
+        The Multi-Column Module is part of the CSS3 specifications proposed by
+        the W3C.
+      </p>
+      <p>
+        This extension to the CSS Box Model opens a new range of possibilities
+        in terms of web design. Multi-column layouts that are so pervasive in
+        the print media (think newspapers, magazines) can now become a reality
+        on the web.
+      </p>
+    </div>
+  </body>
+</html>
