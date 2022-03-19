@@ -999,10 +999,6 @@ body {
 #project_all .box img {
   width : 100%;
 } 
-#project_all .project3 img {
-  position: relative;
-  top: -330px;
-}
 .img_cover {
   width: 100%;
   height: 500px;
