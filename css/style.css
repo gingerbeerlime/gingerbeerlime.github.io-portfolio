@@ -1067,7 +1067,7 @@ body {
   transition: 0.3s all ease;
 }
 /* [프로젝트 전체]프로젝트1 모달 */
-.pro1_modal,
+/* .pro1_modal,
 .pro2_modal {
   width: 1100px;
   height: 600px;
@@ -1127,7 +1127,7 @@ body {
 }
 .fa-times {
   margin-left: 10px;
-}
+} */
 /* [2-6] 컨택트 */
 #contact {
   float: left;

@@ -109,42 +109,4 @@ $(function() {
 );
 
 
-
-   // [5-3] project_all 프로젝트 =커버
-//    $(".img_cover").hide();
-//    $(".project_btns_area .box").hover(
-// 	 function(){
-// 	   $(this).find(".img_cover").stop().fadeIn("slow");
-// 	 },
-// 	 function(){
-// 	  $(this).find(".img_cover").stop().fadeOut("slow");
-// 	 }
-//    );
-
-   // 프로젝트1 모달
-   	// $("#proj_detail").click(function(e){
-	// 	   e.preventDefault();
-	// 	   $('.pro1_modal').show();
-	// });	  
-
-	// $(".pro1_modal .close_btn").click(function(e){
-	// 	  e.preventDefault();
-	// 	  $('.pro1_modal').hide();
-	// });
-
-	// 프로젝트2 모달
-	$("#proj_detail2").click(function(e){
-		e.preventDefault();
-		$('.pro2_modal').show();
-	});	  
-
-	$(".pro2_modal .close_btn").click(function(e){
-		e.preventDefault();
-		$('.pro2_modal').hide();
-	});
-
-
-
-
-
 });
